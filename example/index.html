@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>magnifier</title>
+	<link rel="stylesheet" type="text/css" href="./magnifier.css">
+</head>
+<body>
+
+	<div id="container" style="z-index:55;">
+		<lable>姓名：</lable>
+		<div class="q_inpbox">
+			<input id="name" type="text" name="" value="">
+		</div>
+
+		<lable>手机：</lable>
+		<div class="q_inpbox">
+			<input id="tel" type="tel" name="" value="" maxlength="11">
+		</div>
+
+		<lable>身份证：</lable>
+		<div class="q_inpbox">
+			<input id="cert" type="text" name="" value="">
+		</div>
+
+		<lable>日历：</lable>
+		<div class="q_inpbox">
+			<input id="date" type="date" name="" value="">
+		</div>
+
+		<lable>密码：</lable>
+		<div class="q_inpbox">
+			<input id="psw" type="password" name="" value="">
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.magnifier.js"></script>
+
+	<script type="text/javascript">
+
+	   $("#name, #cert, #psw").magnifier();
+	   $("#tel").magnifier({"type": "mobile", 'parents': '#container'});
+	   //$("#cert").magnify();
+
+	</script>			
+</body>
+</html>
